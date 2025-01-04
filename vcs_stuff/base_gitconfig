@@ -15,7 +15,7 @@
 	cpa = cherry-pick --abort
 
 	hrd = reset --hard
-	unc = "reset --soft head~1"
+	unc = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && uncommit_last_n $*\""
 
 	sqh = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && squash_last_n $*\""
 

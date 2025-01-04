@@ -111,7 +111,7 @@ squash_last_n () {
 	elif [ "$1" ]; then
 		commits_to_merge=$1
 	fi;
-	
+
 	# commits_to_squash - 1 commit messages to contribute to message details
 	# nth from latest commit message to be main commit message
 	commits_to_squash=$(( $commits_to_merge - 1 ))
@@ -127,4 +127,13 @@ squash_last_n () {
 	
 	# each -m adds a new paragraph!
 	git commit -m "$main_commit_message" -m "$message_details" --no-verify
+}
+
+uncommit_last_n () {
+	commits_to_uncommit=1
+	if [ "$1" ]; then
+		commits_to_uncommit=$1
+	fi;
+
+	git reset --soft head~$commits_to_uncommit
 }
