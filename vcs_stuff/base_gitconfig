@@ -17,6 +17,8 @@
 	hrd = reset --hard
 	unc = "reset --soft head~1"
 
+	sqh = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && squash_last_n $*\""
+
 	# https://stackoverflow.com/a/12499237/7930262
 	pr = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && open_new_pr $1\""
 	brf = "!sh -c \"git branch | grep -i $1\""
@@ -38,4 +40,4 @@
 	rebase = true
 
 [branch]
-	sort = -committerdate    
+	sort = -committerdate

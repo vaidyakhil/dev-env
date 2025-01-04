@@ -102,3 +102,29 @@ commit_and_run_experimental_workflow () {
 
 	run_experimental_workflow
 }
+
+squash_last_n () {
+	commits_to_merge=2
+	if [ "$1" ] && [ $1 -le 1 ]; then
+		echo "doesn't mean anything to squash $1 commit"
+		exit 1
+	elif [ "$1" ]; then
+		commits_to_merge=$1
+	fi;
+	
+	# commits_to_squash - 1 commit messages to contribute to message details
+	# nth from latest commit message to be main commit message
+	commits_to_squash=$(( $commits_to_merge - 1 ))
+
+	main_commit_message=$(git log -1 --pretty=format:'%s%n%b' head~$commits_to_squash )
+	message_details=$(git log --reverse -n $commits_to_squash --pretty=format:'* %s%n')
+
+	commit_to_reset_up_to=$(git rev-parse HEAD~$commits_to_merge)
+
+	# the commit-sha provided here will be as is
+	# while changes commited or staged after that will be in staged
+	git reset --soft $commit_to_reset_up_to
+	
+	# each -m adds a new paragraph!
+	git commit -m "$main_commit_message" -m "$message_details" --no-verify
+}
