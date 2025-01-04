@@ -1,0 +1,11 @@
+
+[include]
+	# cannot use $ZSH as git is unable to populate env-vars
+	# while setting path
+    path = ~/.oh-my-zsh/custom/vcs_stuff/base_gitconfig
+
+[includeIf "gitdir:~/work/"]
+  path = ~/work/.gitconfig
+
+[includeIf "gitdir:~/personal/"]
+  path = ~/personal/.gitconfig

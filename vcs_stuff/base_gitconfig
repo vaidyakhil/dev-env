@@ -1,0 +1,39 @@
+[alias]
+	st = status
+	co = checkout
+
+	ci = "!sh -c \"git commit -m '$*' \""
+	cix = "!sh -c \"git commit -m 'EXP: $*' \""
+	
+	rb = rebase
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
+
+	cp = cherry-pick
+	cpc = cherry-pick --continue
+	cpa = cherry-pick --abort
+
+	# https://stackoverflow.com/a/12499237/7930262
+	pr = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && open_new_pr $1\""
+	brf = "!sh -c \"git branch | grep -i $1\""
+	update = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && update $*\""
+	cur = "!sh -c \"git branch --show-current | tr -d '\n' | pbcopy && git branch --show-current\""
+	cixx = 
+
+	# in combination with gh cli
+	exp = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && run_experimental_workflow $*\""
+	cxp = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && commit_and_run_experimental_workflow $*\""
+
+[core]
+	# editor = subl -n -w
+	editor = code -r -w
+
+[push]
+	autoSetupRemote = true
+
+[pull]
+	rebase = true
+
+[branch]
+	sort = -committerdate    
