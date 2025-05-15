@@ -24,6 +24,7 @@
 	brf = "!sh -c \"git branch | grep -i $1\""
 	update = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && update $*\""
 	cur = "!sh -c \"git branch --show-current | tr -d '\n' | pbcopy && git branch --show-current\""
+	pf = "push -f"
 
 	# in combination with gh cli
 	exp = "!sh -c \"source $ZSH/custom/vcs_stuff/git_cli_kit.sh && run_experimental_workflow $*\""

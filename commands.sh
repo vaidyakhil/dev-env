@@ -19,7 +19,7 @@ list_dir_and_grep_exp () {
 		directory_to_list="."
 		expression_to_grep="$1"
 	fi;
-	ls -a $directory_to_list | grep -i $expression_to_grep
+	find $directory_to_list | sort | grep -i $expression_to_grep
 }
 
 # this does not work yet
