@@ -34,3 +34,8 @@ alias stdcl="open -a /Applications/Android\ Studio.app/Contents/MacOS/studio $CL
 alias xdcl="open $CLONE_LUCIFER_PATH/ios/GrowwApp.xcworkspace"
 
 alias cdpl="/Users/vaidyakhil/work/other_groww_repos/code-push-cli/bin/cli.js"
+
+# can add support for android and env later
+IOS_SIML_IDENTIFIER="testing_simulator"
+APP_IDENTIFIER="com.nextbillion.groww"
+alias iop="xcrun simctl terminate $IOS_SIML_IDENTIFIER $APP_IDENTIFIER; xcrun simctl launch $IOS_SIML_IDENTIFIER $APP_IDENTIFIER"

@@ -3,7 +3,7 @@ SSH_CONFIG_PATH="$HOME/.ssh/config"
 PERSONAL_IDENTITY_PATH="$HOME/.ssh/id_ed25519_personal"
 OPTION_PERSONAL_IDENTITY="personal"
 
-WORK_IDENTITY_PATH="$HOME/.ssh/id_rsa_groww_enterprise"
+WORK_IDENTITY_PATH="$HOME/.ssh/id_ed25519"
 OPTION_WORK_IDENTITY="work"
 
 function set_github_identity() {

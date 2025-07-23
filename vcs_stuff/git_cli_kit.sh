@@ -34,7 +34,7 @@ open_new_pr () {
 
 	# --background does not work as of now
     # --profile-directory="Default" makes sure to use work profile on chrome
-	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Default" $new_pr_url
+	/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --profile-directory="Profile 1" $new_pr_url
 }
 
 
