@@ -1,6 +1,7 @@
 [alias]
 	st = status
 	co = checkout
+	fco = "!sh -c \"git fetch origin $1 && git checkout $1 && git update\""
 
 	ci = "!sh -c \"git commit -m '$*' \""
 	cix = "!sh -c \"git commit -m 'EXP: $*' \""
@@ -34,7 +35,7 @@
 
 [core]
 	# editor = subl -n -w
-	editor = code -r -w
+	editor = cursor -r -w
 
 [push]
 	autoSetupRemote = true
