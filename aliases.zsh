@@ -15,11 +15,13 @@ alias now="echo -n \$(date \"+%d %b %Y [%a, %I:%M %p]\") | tee >(pbcopy)"
 alias pmode="gitsw personal && cd $HOME/personal"
 alias wmode="gitsw work && cd $HOME/work"
 alias nuke-prepare-ios="rm -rf node_modules && yarn; yarn && bundle install && cd ios && bundle exec pod install --clean-install"
-alias pref="code $ZSH/custom"
+alias pref="cursor $ZSH/custom"
 alias siml="xcrun simctl boot testing_simulator && open -a Simulator"
 alias eml="emulator -avd ui_test_device_api_level_32 -no-snapshot -noaudio -no-boot-anim -verbose"
 # not working as of now
-alias wd="cd $* && code \"$*\""
+alias wd="cd $* && cursor \"$*\""
+
+alias rdt="react-devtools"
 
 # projects specific
 LUCIFER_PATH=$HOME/work/lucifer
