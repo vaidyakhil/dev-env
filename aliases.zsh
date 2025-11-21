@@ -17,7 +17,7 @@ alias wmode="gitsw work && cd $HOME/work"
 alias nuke-prepare-ios="rm -rf node_modules && yarn; yarn && bundle install && cd ios && bundle exec pod install --clean-install"
 alias pref="cursor $ZSH/custom"
 alias siml="xcrun simctl boot testing_simulator && open -a Simulator"
-alias eml="emulator -avd ui_test_device_api_level_32 -no-snapshot -noaudio -no-boot-anim -verbose"
+alias eml="emulator -avd testing_emulator_api_level_35 -no-snapshot -noaudio -no-boot-anim"
 # not working as of now
 alias wd="cd $* && cursor \"$*\""
 

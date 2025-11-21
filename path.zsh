@@ -1,19 +1,18 @@
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/Applications/Android Studio.app/Contents/jbr/Contents/Home/bin:$PATH"
 
-export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$HOME/android_sdk"
 export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
-export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
 
 # flashlight
 export PATH="$HOME/.flashlight/bin:$PATH"
 -
 # custom java installations
-JAVA_17_ANDROID_FLAMINGO="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
-JAVA_11_AZUL="$HOME/Library/Java/JavaVirtualMachines/azul-it 11.0.21/Contents/Home"
-JAVA_11_OPEN_LOGIC="$HOME/Library/Java/JavaVirtualMachines/openlogic-openjdk-11.jdk/Contents/Home"
-export JAVA_HOME=$JAVA_17_ANDROID_FLAMINGO
+# JAVA_17_ANDROID_FLAMINGO="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+JAVA_17__OPEN_JDK="/Library/Java/JavaVirtualMachines/openjdk-17.jdk/Contents/Home"
+export JAVA_HOME=$JAVA_17__OPEN_JDK
 
 # ensure to have `/bin` after JAVA_HOME
 export PATH="$JAVA_HOME/bin:$PATH"
