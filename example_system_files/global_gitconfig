@@ -9,6 +9,3 @@
 
 [includeIf "gitdir:~/personal/"]
   path = ~/personal/.gitconfig
-
-[includeIf "gitdir:~/.oh-my-zsh/custom/"]
-  path = ~/personal/.gitconfig
