@@ -31,13 +31,18 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+g",
+    "key": "ctrl+shift+c",
     "command": "workbench.action.tasks.runTask",
     "args": "git_stage_current_file"
   },
   {
-    "key": "ctrl+shift+u",
+    "key": "ctrl+shift+x",
     "command": "workbench.action.tasks.runTask",
     "args": "git_unstage_current_file"
+  },
+  // open diff viewer for current file
+  {
+    "key": "ctrl+shift+g",
+    "command": "gitlens.diffWithPrevious"
   }
 ]
