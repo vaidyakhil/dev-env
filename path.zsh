@@ -17,12 +17,18 @@ export JAVA_HOME=$JAVA_17__OPEN_JDK
 # ensure to have `/bin` after JAVA_HOME
 export PATH="$JAVA_HOME/bin:$PATH"
 
+# maestro
+export PATH=$PATH:$HOME/.maestro/bin
+
 # gcloud does not work well with versions greater than certain version of python-3
 # so forcing it to use system python instead of user installed  python3
 # export CLOUDSDK_PYTHON="/usr/bin/python3"
 
-# maestro
-export PATH=$PATH:$HOME/.maestro/bin
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/akhil.vaidya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/akhil.vaidya/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/akhil.vaidya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/akhil.vaidya/google-cloud-sdk/completion.zsh.inc'; fi
 
 # ------------------
 #region jarvis-experimentation
@@ -34,10 +40,3 @@ export PATH="$HOME/personal/command-line-assistant/bin:$PATH"
 
 #endregion jarvis-experimentation
 # ------------------
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/akhil.vaidya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/akhil.vaidya/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/akhil.vaidya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/akhil.vaidya/google-cloud-sdk/completion.zsh.inc'; fi
