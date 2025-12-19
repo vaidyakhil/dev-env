@@ -1,4 +1,4 @@
-## Developer-Env Customizations
+## Instructions
 
 - this repository contains scripts and example system config files in order to replicate dev-env across
   machines
